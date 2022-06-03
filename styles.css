@@ -1,0 +1,154 @@
+.paragraph1{
+    display:table;
+    font-family: sans-serif;
+    font-size: 15px;
+    height: 450px;
+}
+.paragraph2{
+    font-family: sans-serif;
+    font-size: 15px;
+    height: 200px;
+    width:100%;
+    border-top: solid 1px;
+    padding-top: 1%;
+}
+.paragraph3{
+    font-family: sans-serif;
+    font-size: 15px;
+    height: 200px;
+    width: 100%;
+    border-top: solid black 1px;
+    padding-top: 1%;
+    margin-bottom: 70px;
+}
+.paragraph4{
+    font-family: sans-serif;
+    font-size: 15px;
+    height: 200px;
+    width: 100%;
+    border-top: solid black 1px;
+    border-width: 75%;
+    padding-top: 1%;
+}
+#header{
+    height: 15%;
+    padding: 20px;
+}
+
+#main{
+    height: 65%;
+}
+
+#footer{
+    height: 25%;
+}
+
+#websitenav{
+    display: flexbox;
+    border-block: black;
+    width: 10%;
+    float: left;
+    background-color: whitesmoke;
+    padding-left: 1%;
+    padding-right: 1%;
+    border: solid black 1px;
+}
+#content{
+    width: 82%;
+    float: left;
+    padding: 10px;
+}
+
+#contentnav{
+    display: table;
+    background-color: whitesmoke;
+    border: 2 px black;
+    height: 200px;
+    width: 25%;
+    padding: 6px;
+    float:left;
+    border: solid black 1px;
+    
+}
+
+#infobox{
+    display: table;
+    box-shadow: 1px black;
+    border: 1px rgb(20, 1, 1);
+    float: right;
+    width: 200px;
+    margin-left: 15px;
+    padding: 6px;
+    height: 20px;
+    border: solid black 1px;
+}
+#infobox2{
+    box-shadow: 1px black;
+    border: 1px rgb(20, 1, 1);
+    float: top;
+    float: right;
+    width: 200px;
+    margin-left: 15px;
+    padding: 5px;
+    height: 10px;
+    border: solid black 1px;
+    margin-top: 65px;
+
+}
+#content1{
+    clear:left;
+}
+
+th{
+    background-color: green;
+    font-family: sans-serif;
+}
+
+td{
+    font-family: sans-serif;
+}
+
+li{
+    font-family: sans-serif;
+}
+
+ul{
+    font-family: sans-serif;
+}
+
+#image1{
+    width: 150px;
+    height: 150px;
+    float: right;
+}
+
+#image2{
+    width: 90%;
+    height: 90%;
+    float: top;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+#image3{
+    width: 150px;
+    height: 150px;
+    float: center;
+    padding-left: 15px;
+}
+
+.ull{
+    list-style: none;
+    text-align: left;
+    padding: 10px;
+    font:red;
+    font-size: 15px;
+}
+
+.smalltext{
+    font-size: 13px;
+    font-family: sans-serif;
+}
+div{
+    display: block;
+    text-size-adjust: 100%;;
+}
