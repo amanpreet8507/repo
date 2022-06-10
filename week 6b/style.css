@@ -1,5 +1,10 @@
-#header{
+#header, #footer {
 text-align: center;
+}
+
+#footer{
+    clear: both;
+    padding-top: 5px;
 }
 
 body{
