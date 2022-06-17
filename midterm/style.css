@@ -20,3 +20,10 @@ float: right;
 #mainContent{
     width: 75%;
 }
+#infobox{
+    float: right;
+    width:25%
+}
+#paddinginfobox {
+    padding: 10px;
+}
