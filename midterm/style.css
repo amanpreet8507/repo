@@ -7,3 +7,16 @@ h3{
     text-align: center;
     font-weight: bold;
 }
+#leftside {
+    float: left;
+}
+#middlepart {
+float: center;
+} 
+
+#rightside {
+float: right;
+}
+#mainContent{
+    width: 75%;
+}
