@@ -27,3 +27,10 @@ float: right;
 #paddinginfobox {
     padding: 10px;
 }
+#smallTxt
+{
+    text-align: center;
+}
+body{
+    background-color: bisque;
+}
