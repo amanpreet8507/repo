@@ -1,36 +1,94 @@
-h1 {
-text-align: center;
-color: red;
+* {
 
-}
-h3{
-    text-align: center;
-    font-weight: bold;
-}
-#leftside {
-    float: left;
-}
-#middlepart {
-float: center;
-} 
-
-#rightside {
-float: right;
-}
-#mainContent{
-    width: 75%;
-}
-#infobox{
-    float: right;
-    width:25%
-}
-#paddinginfobox {
-    padding: 10px;
-}
-#smallTxt
-{
-    text-align: center;
+    box-sizing: border-box;
 }
 body{
-    background-color: bisque;
+    background-color: ivory;
 }
+
+ header .topnav {
+    padding: 130px;
+}
+
+header div{
+    display: inline;
+}
+
+header a{
+    padding: 20px;
+}
+
+img{
+    width: 450px;
+    height: 500px;
+}
+
+#middle {
+    font-size: 20px;
+    width:40%;
+    
+}
+#h2{
+    text-align: center;
+    font-size: 20px;
+}
+h2{
+    text-align: center;
+}
+h3{
+    font-size: 20px;
+}
+section{
+    overflow: hidden;
+    
+}
+aside{
+    width: 33.33%;
+    float: left;
+    
+}
+blockquote{
+    text-align: center;
+    float: right;
+    font-size: 25px;
+}
+article{
+    text-align: center;
+}
+
+h4{
+    font-size: 20px;
+}
+footer{
+    background-color: red;
+    color: white;
+    text-align: center;
+    height: 40px;
+    font-size: 400;
+}
+
+@media only screen and (max-width: 609px) {
+    header .topnav{
+        display: none;
+    }
+
+    header #middle{
+        display: block;
+        text-align: center;
+    }
+
+    aside{
+        display: block;
+        width: 100%;
+    }
+
+    img{
+        width: 500px;
+    }
+  }
+
+  @media only screen and (max-width: 1195px){
+    img {
+        width: 300px;
+    }
+  }
