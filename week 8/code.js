@@ -1,67 +1,48 @@
-function calc(operation){
-    
-    firstopp = jQuery('#opp1').val();
-    secondpop = jQuery('#opp2').val();
-
-    firstopp_int = parseInt(firstopp);
-    secondopp_int = parseInt(secondpop);
-    hide_button = "<button class='hide'> Hide it </button>"
-
-switch (operation){
-    case "add":
-
-      result = firstopp_int + secondopp_int;
-      text = firstopp + " +  " + secondopp + " = ";
-      styled_result = "<div id='addStyle'>" + text + result + hide_button + "</div>";       
-      break;
-
-    case "sub":
-
-      result = firstopp_int - secondopp_int;
-      text = firstopp + " - " + secondopp + " = ";
-      styled_result = "<div id='subStyle'>" + text + result + hide_button + "</div>"; 
-      break;
-
-    case "multi":
-
-      result = firstopp_int * secondopp_int;
-      text = firstopp + " * " + secondopp + " = ";
-      styled_result = "<div id='multiStyle'>" + text + result + hide_button + "</div>";
-      break;
-
-    case "divi":
-
-      result = firstopp_int / secondopp_int;
-      text = firstopp + " / " + secondopp + " = ";
-      styled_result = "<div id='diviStyle'>" + text + result + hide_button +  "</div>"; 
-      break;
-
-    default:
-      console.log("Something bad happened");
+function f1(){
+    tmp1 = jQuery("#opp1").val()
+    tmp2 = jQuery("#opp2").val()
+    tmp1 = Number (tmp1)
+    tmp2 = Number (tmp2)
+    jQuery("#result").html("Result: " + (tmp1 + tmp2))
+    $("#history").append("<span class='addStyle'>" +  tmp1 + " + " + tmp2 + " = " + (tmp1 + tmp2) + "<span>" + "<br>" )
 
 }
 
-  result = value + result;
-  jQuery('#result').html(result);
-
-  old_div_content = jQuery('#history').html();
-  new_div_content = old_div_content + styled_result ; 
-  jQuery('#history').html(new_div_content); 
-}
-
-function hide_(){
-  $(this).parent().remove();
-}
-setup = function() {
-  
-  jQuery('.button_').click(function (){
-    calc(this.id);
-  });
-  
-  jQuery('body').on("click", ".hide", hide_);
-  
+function f2(){
+    tmp1 = jQuery("#opp1").val()
+    tmp2 = jQuery("#opp2").val()
+    tmp1 = Number (tmp1)
+    tmp2 = Number (tmp2)
+    jQuery("#result").html("Result: " + (tmp1 - tmp2))
+    $("#history").append("<span class='subStyle'>" +  tmp1 + " + " + tmp2 + " = " + (tmp1 + tmp2) + "<span>" + "<br>" )
 
 }
 
-  
-  jQuery(document).ready(setup)
+function f3(){
+    tmp1 = jQuery("#opp1").val()
+    tmp2 = jQuery("#opp2").val()
+    tmp1 = Number (tmp1)
+    tmp2 = Number (tmp2)
+    jQuery("#result").html("Result: " + (tmp1 * tmp2))
+    $("#history").append("<span class='multiStyle'>" + tmp1 + " + " + tmp2 + " = " + (tmp1 * tmp2) + "<span>" + "<br>" )
+
+}
+
+function f4(){
+    tmp1 = jQuery("#opp1").val()
+    tmp2 = jQuery("#opp2").val()
+    tmp1 = Number (tmp1)
+    tmp2 = Number (tmp2)
+    jQuery("#result").html("Result: " + (tmp1 / tmp2))
+    $("#history").append("<span class='diviStyle'>" + tmp1 + " + " + tmp2 + " = " + (tmp1 * tmp2) + "<span>" + "<br>" )
+
+}
+
+function setup(){
+    console.log("setup() got called!");
+    jQuery("#add").click(f1)
+    jQuery("#sub").click(f2)
+    jQuery("#multi").click(f3)
+    jQuery("#divi").click(f4)
+}
+$(document).ready(setup)
