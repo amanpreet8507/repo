@@ -1,11 +1,12 @@
+hide_button = "<button class='hide'>Hide this</button>"
+
 function f1(){
     tmp1 = jQuery("#opp1").val()
     tmp2 = jQuery("#opp2").val()
     tmp1 = Number (tmp1)
     tmp2 = Number (tmp2)
     jQuery("#result").html("Result: " + (tmp1 + tmp2))
-    $("#history").append("<span class='addStyle'>" +  tmp1 + " + " + tmp2 + " = " + (tmp1 + tmp2) + "<span>" + "<br>" )
-
+    $("#history").append("<span class='addStyle'>" +  tmp1 + " + " + tmp2 + " = " + (tmp1 + tmp2) + hide_button +  "<span>" + "<br>" )
 }
 
 function f2(){
@@ -14,8 +15,7 @@ function f2(){
     tmp1 = Number (tmp1)
     tmp2 = Number (tmp2)
     jQuery("#result").html("Result: " + (tmp1 - tmp2))
-    $("#history").append("<span class='subStyle'>" +  tmp1 + " + " + tmp2 + " = " + (tmp1 + tmp2) + "<span>" + "<br>" )
-
+    $("#history").append("<span class='subStyle'>" +  tmp1 + " + " + tmp2 + " = " + (tmp1 + tmp2) + hide_button +  "<span>" + "<br>" )
 }
 
 function f3(){
@@ -24,8 +24,7 @@ function f3(){
     tmp1 = Number (tmp1)
     tmp2 = Number (tmp2)
     jQuery("#result").html("Result: " + (tmp1 * tmp2))
-    $("#history").append("<span class='multiStyle'>" + tmp1 + " + " + tmp2 + " = " + (tmp1 * tmp2) + "<span>" + "<br>" )
-
+    $("#history").append("<span class='multiStyle'>" + tmp1 + " + " + tmp2 + " = " + (tmp1 * tmp2) + hide_button + "<span>" + "<br>" )
 }
 
 function f4(){
@@ -34,8 +33,7 @@ function f4(){
     tmp1 = Number (tmp1)
     tmp2 = Number (tmp2)
     jQuery("#result").html("Result: " + (tmp1 / tmp2))
-    $("#history").append("<span class='diviStyle'>" + tmp1 + " + " + tmp2 + " = " + (tmp1 * tmp2) + "<span>" + "<br>" )
-
+    $("#history").append("<span class='diviStyle'>" + tmp1 + " + " + tmp2 + " = " + (tmp1 * tmp2) + hide_button +  "<span>" + "<br>" )
 }
 
 function setup(){
@@ -45,4 +43,12 @@ function setup(){
     jQuery("#multi").click(f3)
     jQuery("#divi").click(f4)
 }
+
+function hide_(){
+    $(this).parent().remove();
+  }
+
+jQuery('body').on("click", ".hide", hide_);
+
+
 $(document).ready(setup)
