@@ -2,6 +2,9 @@ function process_res(data){
     console.log(data);
     for( i = 0; i < data.results.length; i++){
     $("#result").append(JSON.stringify(data.results[i].original_title) + "<br>")
+    $("#result").append(JSON.stringify(data.results[i].overview) + "<br><br><br>")
+    $("#result").append(` <img src = "https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}">`)
+
     }
 }
 
