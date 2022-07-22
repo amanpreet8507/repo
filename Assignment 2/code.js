@@ -3,7 +3,7 @@ function process_response(data){
     for( i = 0; i < data.results.length; i++){
     $("#results").append(JSON.stringify(data.results[i].original_title) + "<br>")
     $("#results").append(JSON.stringify(data.results[i].overview) + "<br><br><br>")
-    $("#results").append(` <img src = "https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}">`)
+    $("#results").append(` <img src = "https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}"> <br>`)
     
     z = `<button id="${data.results[i].backdrop_path}"
     class = "backdrop_button"> Backdrop image</button>`
