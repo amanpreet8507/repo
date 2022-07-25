@@ -27,6 +27,14 @@ function display_back_drop() {
 }
 
 function display() {
+    $("#results").empty();
+    for(i = 1; i<= Math.ceil(data.results.length /page_size); i++){
+        // $("#results").append(`<button class = "display" id = "${i}">${i}</button>`)
+        
+        
+    }
+    $("#results").append("<br>")
+
     page_size = Number(page_size)
     first_index = page_size * (page_number - 1)
     last_index = page_size * (page_number - 1) + (page_size - 1)
