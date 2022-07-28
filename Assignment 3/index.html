@@ -16,40 +16,33 @@
   </style>
 </head>
 
-<body id = "list_">
-  Page size
-      <select  id="page_size"> 
+<body>
+
+    <select id = "page_size"> 
       <option value="3">3</option>
       <option value="5">5</option>
       <option value="10">10</option>
       <option value="20">20</option>
-      </select>
+    </select>
 
   <br>
+
   <article>
       Enter movie name
       <input type="text" id="movie_name" />
-      <button id="find_movie_info">Click Me!
-      </button>
+      <button id="find_movie_info"> Find Movie</button>
       <br>
       <br>
-      <button class = "first_button"> First </button>
-      <button class = "prev_button"> Prev. </button>
-      <button class="display" id="1">  1 </button>
-      <button class="display" id="2">  2 </button>
-      <button class="display" id="3">  3 </button>
-      <button class="display" id="4">  4 </button>
-      <button class="display" id="5">  5 </button>
-      <button class="display" id="6">  6 </button>
-      <button class="display" id="7">  7 </button>
-      <button class = "last_button"> Next </button>
-      <button class = "last_button"> Last </button>
+      
+      <div id="button"></div>
+      
+      <div id = "more_click"></div>
+    
+      <div id="results"></div>
 
-      <div id="results">
+  </article>
 
-      </div>
-  </article>
-  <article id="right_div">
-  </article>
+  <article id="right_div"></article>
+
 </body>
 </html>
