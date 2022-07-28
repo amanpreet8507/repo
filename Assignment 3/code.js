@@ -12,6 +12,8 @@ function process_response(x) {
     display()
 }
 
+
+
 function call_ajax() {
     w = $("#movie_name").val();
     $.ajax({
@@ -21,14 +23,16 @@ function call_ajax() {
     })
 }
 
+
+
 function display_back_drop() {
     w = $(this).attr("id");
     console.log(`<img src="https://image.tmdb.org/t/p/original${w}" width="100"%>`);
     $("#right_div").html(`<img src="https://image.tmdb.org/t/p/original${w}" width="100%">`)
 
-
-
 }
+
+
 
 function display() {
     $("#results").empty();
@@ -51,6 +55,7 @@ function display() {
         $("#results").append(z + "<br>");
         }
     }
+
     for (i = 1; i <= Math.ceil(data.results.length / page_size); i++) {
         $("#button").append(`<button class="display"onclick="change_page_number(this)" id="${i}">${i}</button>`)
     }
@@ -62,16 +67,22 @@ function display() {
 
 }
 
+
+
 function change_page_number(thisis) {
     page_number = $(thisis).attr("id");
     page_number = Number(page_number)
     display()
 }
 
+
+
 function first(){
     page_number = 1
     display()
 }
+
+
 
 function last(){
     page_number = Math.ceil(data.results.length / page_size)
@@ -90,6 +101,7 @@ function next(){
           
 }
 
+
 function previous(){
     if (page_number == 1){
         return
@@ -99,6 +111,8 @@ function previous(){
         display()
     }
 }
+
+
 
 function setup() {
     $("#find_movie_info").click(call_ajax)
@@ -113,7 +127,6 @@ function setup() {
     $("page_size").click(change_page_number, display)
 
     $("body").on("click", ".display", change_page_number)
-
 
 }
 
